@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class MediaValores {
+public class MediaValores{
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -15,6 +15,16 @@ public class MediaValores {
         System.out.print("Digite a quarta nota: ");
         double nota4 = scanner.nextDouble();
 
-        System.out.printf("Resultado da média: %.2f",(nota1+nota2+nota3+nota4)/4 );
+        double media = (nota1 + nota2 + nota3+ nota4)/4;
+        
+        if(media >= 7){
+            System.out.printf("Aluno aprovado. Média: %.2f ",media);
+        }
+        else if(media < 7 && media >= 5){
+             System.out.printf("Aluno de recuperação. Média: %.2f ",media);
+        }
+        else{
+             System.out.printf("Aluno reprovado. Média: %.2f ",media);
+        }
     }
 }
